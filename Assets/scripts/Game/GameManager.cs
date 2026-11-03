@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameState { Playing, Lost }
-
+    public enum GameState { Playing, Lost, Won }
+    public GameObject winPanel;
     public GameState State { get; private set; } = GameState.Playing;
 
     public GameObject losePanel;
@@ -13,8 +13,18 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         losePanel.SetActive(false);
+        winPanel.SetActive(false);
     }
+    public void Win()
+    {
+        if (State != GameState.Playing) return;
 
+        State = GameState.Won;
+        winPanel.SetActive(true);
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void Lose()
     {
         if (State != GameState.Playing) return;
