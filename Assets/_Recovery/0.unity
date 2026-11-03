@@ -405,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 256186497}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Point1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -420,11 +420,11 @@ Transform:
   m_GameObject: {fileID: 256186496}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2374878, y: -1.087, z: -3.5410156}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 856.4775, y: 0.15066409, z: 819.8734}
+  m_LocalScale: {x: 0.74741757, y: 0.74741757, z: 0.74741757}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1030684084}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308563682
 GameObject:
@@ -963,7 +963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623062279}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Point2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -978,11 +978,11 @@ Transform:
   m_GameObject: {fileID: 623062278}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.201477, y: -1.087, z: -10.080994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 862.2569, y: 0.108808696, z: 836.63873}
+  m_LocalScale: {x: 0.74741757, y: 0.74741757, z: 0.74741757}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1030684084}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625632529
 GameObject:
@@ -1942,7 +1942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801832725}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Point3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1957,11 +1957,11 @@ Transform:
   m_GameObject: {fileID: 801832724}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.298523, y: -1.087, z: 9.638977}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 852.6526, y: 0.51540387, z: 838.69415}
+  m_LocalScale: {x: 0.74741757, y: 0.74741757, z: 0.74741757}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1030684084}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &837823666
 PrefabInstance:
@@ -2608,7 +2608,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        Gain: 5
+        Gain: 6
         LegacyInput: 
         LegacyGain: 1
         CancelDeltaTime: 0
@@ -2621,7 +2621,7 @@ MonoBehaviour:
       Enabled: 1
       Input:
         InputAction: {fileID: -5630151704836100654, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-        Gain: -5
+        Gain: -6
         LegacyInput: 
         LegacyGain: 1
         CancelDeltaTime: 0
@@ -2900,7 +2900,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -3006,9 +3006,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 308563683}
-  - {fileID: 256186497}
-  - {fileID: 623062279}
-  - {fileID: 801832725}
   - {fileID: 351956371}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3400,6 +3397,7 @@ GameObject:
   - component: {fileID: 1290098113}
   - component: {fileID: 1290098118}
   - component: {fileID: 1290098117}
+  - component: {fileID: 1290098119}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -3543,6 +3541,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &1290098119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290098112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b99ae09971063eb49999f42a8a35b060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
+  jumpForce: 3
 --- !u!1 &1308101375
 GameObject:
   m_ObjectHideFlags: 0
@@ -4568,4 +4579,7 @@ SceneRoots:
   - {fileID: 958853732}
   - {fileID: 960098157}
   - {fileID: 742389732}
+  - {fileID: 256186497}
+  - {fileID: 623062279}
+  - {fileID: 801832725}
   - {fileID: 1030684084}
