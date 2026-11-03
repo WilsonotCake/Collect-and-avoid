@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -6,11 +7,29 @@ public class GameManager : MonoBehaviour
 
     public GameState State { get; private set; } = GameState.Playing;
 
+    public GameObject losePanel;
+
+    void Awake()
+    {
+        Time.timeScale = 1f;
+        losePanel.SetActive(false);
+    }
+
     public void Lose()
     {
         if (State != GameState.Playing) return;
 
         State = GameState.Lost;
-        Debug.Log("You lose!");
+        losePanel.SetActive(true);
+        Time.timeScale = 0f;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void TryAgain()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
