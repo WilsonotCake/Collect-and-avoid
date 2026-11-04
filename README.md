@@ -10,9 +10,11 @@ Controls
 
 How to play
 
-Download the Windows build here: [paste link]
+1. Download this repository with **Code → Download ZIP** and extract it.
+2. In Unity Hub, click **Add → Add project from disk** and select the folder with `Assets`, `Packages` and `ProjectSettings`.
+3. Open it with Unity `6000.6.7f1`.
+4. In the Project window, open `Assets/_Recovery/0.unity` and press **Play**.
 
-Extract the archive and open the .exe file.
 
 Scripts
 
