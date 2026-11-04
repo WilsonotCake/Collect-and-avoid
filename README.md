@@ -15,6 +15,9 @@ How to play
 3. Open it with Unity `6000.6.7f1`.
 4. In the Project window, open `Assets/_Recovery/0.unity` and press **Play**.
 
+Perfomance
+
+Stable 60 fps
 
 Scripts
 
@@ -30,7 +33,11 @@ Assets
 - Coin sound - unity free assets
 - Coin model - unity free assets
 - Character model - just my favorite capsule
+  
+Known bugs
+
+Camera slides through the walls. EnemyAI sometimes bugs
 
 What I learned
 
-I learned basically everything that you see in my project, because its my first project in Unity
+I learned basically everything that you see in my project, because its my first project in Unity.
